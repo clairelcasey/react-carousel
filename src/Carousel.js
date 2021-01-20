@@ -11,7 +11,7 @@ import Card from "./Card";
  *  title = string for title
  * 
  * States:
- *  cardIndx = Number (start is 0)
+ *  cardIdx = Number (start is 0)
  * 
  * App -> Carousel -> Card
  */
@@ -36,7 +36,7 @@ function Carousel(props) {
       onClick={goForward}
       data-testid="right-arrow"
     />);
-    
+
   return (
     <div className="Carousel">
       <h1>{props.title}</h1>

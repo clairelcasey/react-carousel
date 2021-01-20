@@ -8,7 +8,7 @@ import "./Card.css";
  *  currNum - number
  *  totalNum - number
  * 
- * Carousel -> Card
+ * App -> Carousel -> Card
  */
 
 function Card(props) {

@@ -5,7 +5,9 @@ import Carousel from "./Carousel";
 /* ************************* Functionality Tests *************************** */
 
 /* ********************* 1. click on arrows test *********************** */
-
+// describe a short idea (e.g. arrows functionality)
+// be more specific than works - navigates to next image, etc.
+// string as variables
 describe("clicking on arrows works", function () {
   it("works when you click on the right arrow", function () {
     const { queryByTestId, queryByAltText } = render(<Carousel />);
@@ -53,7 +55,7 @@ describe("clicking on arrows works", function () {
 describe("correct arrow disappears when on first/ last image", function () {
   it("left arrow disappears when on first image", function () {
     const { container, queryByTestId, debug } = render(<Carousel />);
-    debug(container);
+    // debug(container);
     // expect left-arrow to not be inside of the container
     expect(container.querySelectorAll(".fas").length).toEqual(1);
     expect(queryByTestId("left-arrow")).toBe(null);
@@ -62,7 +64,7 @@ describe("correct arrow disappears when on first/ last image", function () {
   
   it("right arrow disappears when on last image", function () {
     const { container, queryByTestId, queryByAltText, debug } = render(<Carousel />);
-    debug(container);
+    // debug(container);
     const rightArrow = queryByTestId("right-arrow");
 
     // move forward in the carousel to image 2
@@ -81,7 +83,7 @@ describe("correct arrow disappears when on first/ last image", function () {
 })
 
 /* ************************* Smoke Tests ************************************ */
-
+// move tests to the top
 describe("smoke tests", function () {
   it("renders without crashing with default data", function () {
     render(<Carousel />);
@@ -109,7 +111,7 @@ describe("smoke tests", function () {
   });
 });
 
-/* ******************** Snapshot Tests Tests ******************************* */
+/* ******************** Snapshot Tests  ******************************* */
 
 describe("snapshot tests", function () {
   it("matches snapshot", function () {
